@@ -1,7 +1,7 @@
 # -----------------------------------------------------------------------------
-$computerName = Read-Host 'Enter New Computer Name'
-Write-Host "Renaming this computer to: " $computerName  -ForegroundColor Yellow
-Rename-Computer -NewName $computerName
+#$computerName = Read-Host 'Enter New Computer Name'
+#Write-Host "Renaming this computer to: " $computerName  -ForegroundColor Yellow
+#Rename-Computer -NewName $computerName
 # -----------------------------------------------------------------------------
 Write-Host ""
 Write-Host "Disable Sleep on AC Power..." -ForegroundColor Green
