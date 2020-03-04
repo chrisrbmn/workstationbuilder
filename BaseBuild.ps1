@@ -1,6 +1,6 @@
 # Description: Boxstarter/Choco build script for IT SysAdmin/Engineer base PC build.
 # Author: Chris B
-# https://
+# https://github.com/chrisrbmn/workstationbuilder
 # Creation Date: 2020-03-04
 # Last Updated: 
 #
@@ -8,7 +8,10 @@
 # Common settings for azure devops
 # https://github.com/chrisrbmn/windows-dev-box-setup-scripts/blob/master/devops_azure.ps1
 # 
+# Reference Author: Edi Wang
 # https://edi.wang/post/2018/12/21/automate-windows-10-developer-machine-setup
+# https://github.com/EdiWang/EnvSetup
+#
 # The below reference detects whether it currently has administrative permissions, and if not, a UAC will pop up to request an administrator right to PowerShell and continue running the current script.
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
 
