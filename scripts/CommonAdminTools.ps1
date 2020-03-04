@@ -28,6 +28,7 @@ choco install vscode-powershell -y
 choco install softerraldapbrowser -y
 choco install notepadplusplus.install -y
 choco install sql-server-management-studio -y
+#choco install visualstudio2019community -y
 #choco install dotpeek -y
 #choco install linqpad -y
 #choco install fiddler -y
