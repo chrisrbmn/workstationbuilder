@@ -1,6 +1,6 @@
 Write-Host ""
-Write-Host "Installing Common Admin Applications..." -ForegroundColor Green
-Write-Host "------------------------------------" -ForegroundColor Green
+Write-Host "Installing Common Admin Applications..." -ForegroundColor "Green"
+Write-Host "------------------------------------" -ForegroundColor "Green"
 
 if (Check-Command -cmdname 'git') {
     Write-Host "Git is already installed, checking new version..."
@@ -8,7 +8,7 @@ if (Check-Command -cmdname 'git') {
 }
 else {
     Write-Host ""
-    Write-Host "Installing Git for Windows..." -ForegroundColor Green
+    Write-Host "Installing Git for Windows..." -ForegroundColor "Green"
     choco install -y git --package-parameters="'/GitAndUnixToolsOnPath /WindowsTerminal'"
 }
 
@@ -41,14 +41,14 @@ choco install github-desktop -y
 
 #--- Create a folder for bin installs ---
 Write-Host ""
-Write-Output "Creating BIN folder on C:\" -ForegroundColor Green
-Write-Host "------------------------------------" -ForegroundColor Green
+Write-Output "Creating BIN folder on C:\" -ForegroundColor "Green"
+Write-Host "------------------------------------" -ForegroundColor "Green"
 New-Item -Path C:\bin -ItemType "directory"
 
 # Tools with installers placed in the BIN folder.
 Write-Host ""
-Write-Output "Installing Special Apps into C:\bin folder." -ForegroundColor Green
-Write-Host "------------------------------------" -ForegroundColor Green
+Write-Output "Installing Special Apps into C:\bin folder." -ForegroundColor "Green"
+Write-Host "------------------------------------" -ForegroundColor "Green"
 
 if (Check-Command -cmdname 'node') {
     Write-Host "Node.js is already installed, checking new version..."
@@ -56,7 +56,7 @@ if (Check-Command -cmdname 'node') {
 }
 else {
     Write-Host ""
-    Write-Host "Installing Node.js..." -ForegroundColor Green
+    Write-Host "Installing Node.js..." -ForegroundColor "Green"
     choco install nodejs -y --params "/InstallDir:C:\bin\nodejs"
 }
 

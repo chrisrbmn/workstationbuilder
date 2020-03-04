@@ -1,14 +1,17 @@
 #--- Create a folder for tools ---
 Write-Host ""
-Write-Output "Creating Tools folder on C:\" -ForegroundColor Green
-Write-Host "------------------------------------" -ForegroundColor Green
+Write-Output "Creating Tools folder on C:\" -ForegroundColor "Green"
+Write-Host "------------------------------------" -ForegroundColor "Green"
 New-Item -Path C:\tools -ItemType "directory"
 New-Item -Path C:\tools -Name "TOOLS_THAT_DON'T_HAVE_INSTALLER.txt" -ItemType "file" -Value "This folder is for tools that are NOT installed via an installer. Tools that are installed via an installer should be placed in default programs location or in 'C:\bin\'"
 
-
-Write-Host "Installing RSAT Tools" -ForegroundColor "DarkRed"
+Write-Host ""
+Write-Host "Installing RSAT Tools" -ForegroundColor "Green"
+Write-Host "------------------------------------" -ForegroundColor "Green"
 Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability -Online
-Write-Host "Updating the help file" -ForegroundColor "DarkRed"
+Write-Host ""
+Write-Host "Updating the help file" -ForegroundColor "Yellow"
+Write-Host "------------------------------------" -ForegroundColor "Yellow"
 Update-Help
 
 # Install applications not available in Chocolatey
