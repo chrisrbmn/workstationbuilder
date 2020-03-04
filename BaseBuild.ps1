@@ -74,7 +74,6 @@ choco install -y terraform --params "/InstallDir:C:\bin\terraform"
 Remove-Item C:\Users\*\Desktop\*.ini –Force
 
 
-
 Enable-UAC
 Enable-MicrosoftUpdate
 Install-WindowsUpdate -acceptEula
