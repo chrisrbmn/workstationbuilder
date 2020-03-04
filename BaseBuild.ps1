@@ -69,6 +69,12 @@ choco install -y terraform --params "/InstallDir:C:\bin\terraform"
 #Ubuntu1804 run apt install ansible -y
 #write-host "Finished installing tools inside the WSL distro"
 
+
+# Clean up trash.
+Remove-Item C:\Users\*\Desktop\*.ini –Force
+
+
+
 Enable-UAC
 Enable-MicrosoftUpdate
 Install-WindowsUpdate -acceptEula
