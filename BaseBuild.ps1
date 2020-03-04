@@ -59,7 +59,7 @@ choco install -y powershell-core
 choco install -y azure-cli
 Install-Module -Force Az
 choco install -y microsoftazurestorageexplorer
-choco install -y terraform --params "/InstallDir:C:\bin\curl"
+choco install -y terraform --params "/InstallDir:C:\bin\terraform"
 
 # Install tools in WSL instance
 #write-host "Installing tools inside the WSL distro..."
