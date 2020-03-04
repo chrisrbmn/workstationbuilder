@@ -9,10 +9,8 @@ if (Check-Command -cmdname 'git') {
 else {
     Write-Host ""
     Write-Host "Installing Git for Windows..." -ForegroundColor "Green"
-    choco install -y git --package-parameters="'/GitAndUnixToolsOnPath /WindowsTerminal'"
+    choco install -y git.install --params "/GitAndUnixToolsOnPath /WindowsTerminal"
 }
-
-
 
 choco install 7zip.install -y
 choco install chocolatey-core.extension -y
