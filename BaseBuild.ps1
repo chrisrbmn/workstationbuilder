@@ -46,7 +46,9 @@ executeScript "RemoveDefaultApps.ps1";
 executeScript "CommonAdminTools.ps1";
 executeScript "Tools.ps1";
 executeScript "Browsers.ps1";
-
+Write-Host ""
+Write-Host "Installing HyperV..." -ForegroundColor Green
+Write-Host "------------------------------------" -ForegroundColor "Green"
 executeScript "HyperV.ps1";
 RefreshEnv
 #executeScript "WSL.ps1";
