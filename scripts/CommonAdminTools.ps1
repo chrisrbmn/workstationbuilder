@@ -60,7 +60,8 @@ if (Check-Command -cmdname 'node') {
 else {
     Write-Host ""
     Write-Host "Installing Node.js..." -ForegroundColor "Green"
-    choco install nodejs -y --params "/InstallDir:C:\bin\nodejs"
+    #choco install nodejs -y --params "/InstallDir:C:\bin\nodejs"
+    choco install nodejs.install -ia "'INSTALLDIR=C:\bin\nodejs'"
 }
 
 choco install openssl.light -y --params "/InstallDir:C:\bin\openssl"
