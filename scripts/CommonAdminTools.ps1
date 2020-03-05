@@ -53,8 +53,8 @@ Write-Host ""
 Write-Output "Installing Special Apps into C:\bin folder." -ForegroundColor "Green"
 Write-Host "------------------------------------" -ForegroundColor "Green"
 
-choco install -y curl -ia "'INSTALLDIR=C:\bin\curl'"
-choco install -y lockhunter -ia "'INSTALLDIR=C:\bin\lockhunter'"
+choco install -y curl --params "/DIR=C:\bin\curl"
+choco install -y lockhunter --params "/DIR=C:\bin\lockhunter"
 
 if (Check-Command -cmdname 'node') {
     Write-Host "Node.js is already installed, checking new version..."

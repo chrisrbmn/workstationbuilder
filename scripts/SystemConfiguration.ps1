@@ -54,8 +54,8 @@ Write-Host "------------------------------------" -ForegroundColor "Yellow"
 Stop-Process -ProcessName Explorer
 # -----------------------------------------------------------------------------
 Write-Host ""
-Write-Host "Add 'This PC' Desktop Icon..." -ForegroundColor Green
-Write-Host "------------------------------------" -ForegroundColor Green
+Write-Host "Add 'This PC' Desktop Icon..." -ForegroundColor "Green"
+Write-Host "------------------------------------" -ForegroundColor "Green"
 $thisPCIconRegPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel"
 $thisPCRegValname = "{20D04FE0-3AEA-1069-A2D8-08002B30309D}" 
 $item = Get-ItemProperty -Path $thisPCIconRegPath -Name $thisPCRegValname -ErrorAction SilentlyContinue 
@@ -68,19 +68,19 @@ else {
 # -----------------------------------------------------------------------------
 # Enable God Mode Menu
 # Requires -RunAsAdministrator
-if (Test-Path -Path '$env:USERPROFILE\Desktop\GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}' -Pathtype Container) {
-    Write-Host "GodMode Menu already exists." -ForegroundColor "Yellow"
-}
-else {
-Write-Host ""
-Write-Host "Creating GodMode Menu on Desktop..." -ForegroundColor "Green"
-Write-Host "------------------------------------" -ForegroundColor "Green"
-$godmodeSplat = @{
+if (-Not (Test-Path -Path '$env:USERPROFILE\Desktop\GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}' -Pathtype Container)) {
+    Write-Host ""
+    Write-Host "Creating GodMode Menu on Desktop..." -ForegroundColor "Green"
+    Write-Host "------------------------------------" -ForegroundColor "Green"
+    $godmodeSplat = @{
     Path = "$env:USERPROFILE\Desktop"
     Name = "GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}"
     ItemType = 'Directory'
     }
     New-Item @godmodeSplat
+}
+else {
+Write-Host "GodMode Menu already exists." -ForegroundColor "Yellow"
 }
 # -----------------------------------------------------------------------------
 #--- Enable developer mode on the system ---
