@@ -26,6 +26,7 @@ The below projects have provided examples and inspiration to this project. Pleas
 
 -  [windows-dev-box-setup-scripts](https://github.com/microsoft/windows-dev-box-setup-scripts)
 -  [EnvSetup](https://github.com/EdiWang/EnvSetup)
+-  [Joshua Chini](https://joshuachini.com/2017/10/27/automated-setup-of-a-windows-environment-using-boxstarter-and-powershell/)
 
 ## Customizing or Contributing
 This script should provide most of what the infrastructure/application admin/engineer needs in his/her toolset. With that said, it is certainly possible that this script may not match your personal preferences exactly. If this case, please feel free to fork this project and make whatever changes you desire as long as you give a little credit by providing a reference link back to this project.
