@@ -31,3 +31,4 @@ The below projects have provided examples and inspiration to this project. Pleas
 
 - Not installing custom tools into custom path
 - Auto Reboot does work. Manually rebooting is a workaround. Script will pick up where it left off.
+- HyperV not installing
