@@ -4,8 +4,8 @@
 #Rename-Computer -NewName $computerName
 # -----------------------------------------------------------------------------
 Write-Host ""
-Write-Host "Disable Sleep on AC Power..." -ForegroundColor Green
-Write-Host "------------------------------------" -ForegroundColor Green
+Write-Host "Disable Sleep on AC Power..." -ForegroundColor "Green"
+Write-Host "------------------------------------" -ForegroundColor "Green"
 Powercfg /Change monitor-timeout-ac 20
 Powercfg /Change standby-timeout-ac 0
 # -----------------------------------------------------------------------------
