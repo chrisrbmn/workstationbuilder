@@ -40,9 +40,9 @@ function executeScript {
 }
 
 #--- Setting up Windows ---
-executeScript "FileExplorerSettings.ps1";
-executeScript "SystemConfiguration.ps1";
-executeScript "RemoveDefaultApps.ps1";
+#executeScript "FileExplorerSettings.ps1";
+#executeScript "SystemConfiguration.ps1";
+#executeScript "RemoveDefaultApps.ps1";
 #executeScript "Browsers.ps1";
 executeScript "CommonAdminTools.ps1";
 #executeScript "Tools.ps1";
