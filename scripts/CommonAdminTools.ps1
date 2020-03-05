@@ -69,6 +69,6 @@ else {
 
 choco install -y openssl.light --params "/InstallDir:C:\bin\openssl"
 #choco install -y python
-choco install -y python3 -ia "'INSTALLDIR=C:\bin\python3'"
+choco install -y python3 -ia "'TargetDir=C:\bin\python3'"
 choco install -y terraform -ia "'INSTALLDIR=C:\bin\terraform'"
 choco install -y wget -ia "'INSTALLDIR=C:\bin\wget'"
