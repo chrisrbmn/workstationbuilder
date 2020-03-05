@@ -76,5 +76,5 @@ Enable-MicrosoftUpdate
 Install-WindowsUpdate -acceptEula -GetUpdatesFromMS
 
 Write-Host "------------------------------------" -ForegroundColor "Green"
-Read-Host -Prompt "Setup is done, restart is needed, press [ENTER] to restart computer."
+Read-Host -Prompt "'Setup is done, restart is needed, press [ENTER] to restart computer.'"
 Restart-Computer
