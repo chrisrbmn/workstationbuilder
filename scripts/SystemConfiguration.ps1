@@ -88,13 +88,13 @@ Write-Host "GodMode Menu already exists." -ForegroundColor "Yellow"
 # Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\AppModelUnlock -Name AllowDevelopmentWithoutDevLicense -Value 1
 # -----------------------------------------------------------------------------
 Write-Host ""
-Write-Host "Enable Remote Desktop..." -ForegroundColor "Green"
+Write-Host "Enabling Remote Desktop..." -ForegroundColor "Green"
 Write-Host "------------------------------------" -ForegroundColor "Green"
 #Set-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\" -Name "fDenyTSConnections" -Value 0
 #Set-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp\" -Name "UserAuthentication" -Value 1
 #Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 Enable-RemoteDesktop
-
+# -----------------------------------------------------------------------------
 if (Check-Command -cmdname 'choco') {
     Write-Host "Choco is already installed, skip installation." -ForegroundColor "Yellow"
 }
@@ -104,3 +104,4 @@ else {
     Write-Host "------------------------------------" -ForegroundColor "Green"
     Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
+# -----------------------------------------------------------------------------
