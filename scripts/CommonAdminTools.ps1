@@ -15,7 +15,7 @@ if (Check-Command -cmdname 'git') {
 else {
     Write-Host ""
     Write-Host "Installing Git for Windows..." -ForegroundColor "Green"
-    choco install -y git.install --params "'/InstallDir=C:\bin\git' /GitAndUnixToolsOnPath /WindowsTerminal"
+    choco install -y git -ia "'TargetDir=C:\bin\nodejs' /GitAndUnixToolsOnPath /WindowsTerminal"
 }
 
 # Tools with installers placed in the BIN folder.
@@ -23,9 +23,11 @@ Write-Host ""
 Write-Output "Installing Special Apps into C:\bin folder." -ForegroundColor "Green"
 Write-Host "------------------------------------" -ForegroundColor "Green"
 #choco install -y curl --params "/DIR=C:\bin\curl"
-choco install -y curl --params "/INSTALLDIR=C:\bin\curl"
+#choco install -y curl --params "/INSTALLDIR=C:\bin\curl"
+choco install -y curl -ia "'TargetDir=C:\bin\curl'"
 #choco install -y lockhunter --params "/DIR=C:\bin\lockhunter"
-choco install -y lockhunter --params "/INSTALLDIR=C:\bin\lockhunter"
+#choco install -y lockhunter --params "/INSTALLDIR=C:\bin\lockhunter"
+choco install -y lockhunter -ia "'TargetDir=C:\bin\lockhunter'"
 
 # node is installing to custom path correctly
 if (Check-Command -cmdname 'node') {
@@ -39,11 +41,11 @@ else {
     choco install -y nodejs.install -ia "'INSTALLDIR=C:\bin\nodejs'"
 }
 # openssl is installing to custom path correctly
-choco install -y openssl.light --params "/InstallDir:C:\bin\openssl"
+choco install -y openssl.light --params "/InstallDir=C:\bin\openssl"
 #choco install -y python
 choco install -y python3 -ia "'TargetDir=C:\bin\python3'"
-choco install -y terraform -ia "'INSTALLDIR=C:\bin\terraform'"
-choco install -y wget -ia "'INSTALLDIR=C:\bin\wget'"
+choco install -y terraform -ia "'TargetDir=C:\bin\terraform'"
+choco install -y wget -ia "'TargetDir=C:\bin\wget'"
 
 # Unmodified choco installs
 # -------------------------
