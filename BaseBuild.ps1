@@ -51,9 +51,7 @@ RefreshEnv
 #executeScript "WSL.ps1";
 #RefreshEnv
 #executeScript "Docker.ps1";
-
-executeScript "Azure.ps1";
-
+#executeScript "Azure.ps1";
 
 # Install tools in WSL instance
 #write-host "Installing tools inside the WSL distro..."
