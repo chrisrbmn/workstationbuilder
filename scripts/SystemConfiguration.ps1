@@ -68,29 +68,37 @@ else {
 # -----------------------------------------------------------------------------
 # Enable God Mode Menu
 # Requires -RunAsAdministrator
+if (Test-Path -Path '$env:USERPROFILE\Desktop\GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}' -Pathtype Container) {
+    Write-Host "GodMode Menu already exists." -ForegroundColor "Yellow"
+}
+else {
+Write-Host ""
+Write-Host "Creating GodMode Menu on Desktop..." -ForegroundColor "Green"
+Write-Host "------------------------------------" -ForegroundColor "Green"
 $godmodeSplat = @{
     Path = "$env:USERPROFILE\Desktop"
     Name = "GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}"
     ItemType = 'Directory'
     }
     New-Item @godmodeSplat
+}
 # -----------------------------------------------------------------------------
 #--- Enable developer mode on the system ---
 # Set-ItemProperty -Path HKLM:\Software\Microsoft\Windows\CurrentVersion\AppModelUnlock -Name AllowDevelopmentWithoutDevLicense -Value 1
 # -----------------------------------------------------------------------------
 Write-Host ""
-Write-Host "Enable Remote Desktop..." -ForegroundColor Green
-Write-Host "------------------------------------" -ForegroundColor Green
+Write-Host "Enable Remote Desktop..." -ForegroundColor "Green"
+Write-Host "------------------------------------" -ForegroundColor "Green"
 Set-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\" -Name "fDenyTSConnections" -Value 0
 Set-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp\" -Name "UserAuthentication" -Value 1
 Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
 
 if (Check-Command -cmdname 'choco') {
-    Write-Host "Choco is already installed, skip installation."
+    Write-Host "Choco is already installed, skip installation." -ForegroundColor "Yellow"
 }
 else {
     Write-Host ""
-    Write-Host "Installing Chocolatey for Windows..." -ForegroundColor Green
-    Write-Host "------------------------------------" -ForegroundColor Green
+    Write-Host "Installing Chocolatey for Windows..." -ForegroundColor "Green"
+    Write-Host "------------------------------------" -ForegroundColor "Green"
     Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 }
