@@ -65,7 +65,7 @@ else {
 }
 
 choco install openssl.light -y --params "/InstallDir:C:\bin\openssl"
-choco install wget -y --params "/InstallDir:C:\bin\lockhunter"
+choco install lockhunter -y --params "/InstallDir:C:\bin\lockhunter"
 choco install curl -y --params "/InstallDir:C:\bin\curl"
 choco install wget -y --params "/InstallDir:C:\bin\wget"
 
