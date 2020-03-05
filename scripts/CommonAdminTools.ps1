@@ -53,6 +53,9 @@ Write-Host ""
 Write-Output "Installing Special Apps into C:\bin folder." -ForegroundColor "Green"
 Write-Host "------------------------------------" -ForegroundColor "Green"
 
+choco install -y curl -ia "'INSTALLDIR=C:\bin\curl'"
+choco install -y lockhunter -ia "'INSTALLDIR=C:\bin\lockhunter'"
+
 if (Check-Command -cmdname 'node') {
     Write-Host "Node.js is already installed, checking new version..."
     choco update nodejs -y
@@ -61,13 +64,11 @@ else {
     Write-Host ""
     Write-Host "Installing Node.js..." -ForegroundColor "Green"
     #choco install nodejs -y --params "/InstallDir:C:\bin\nodejs"
-    choco install nodejs.install -ia "'INSTALLDIR=C:\bin\nodejs'"
+    choco install -y nodejs.install -ia "'INSTALLDIR=C:\bin\nodejs'"
 }
 
-choco install openssl.light -y --params "/InstallDir:C:\bin\openssl"
-choco install lockhunter -y --params "/InstallDir:C:\bin\lockhunter"
-choco install curl -y --params "/InstallDir:C:\bin\curl"
-choco install wget -y --params "/InstallDir:C:\bin\wget"
-
+choco install -y openssl.light --params "/InstallDir:C:\bin\openssl"
 #choco install -y python
-choco install -y python3 --params "/InstallDir:C:\bin\python3"
+choco install -y python3 -ia "'INSTALLDIR=C:\bin\python3'"
+choco install -y terraform -ia "'INSTALLDIR=C:\bin\terraform'"
+choco install -y wget -ia "'INSTALLDIR=C:\bin\wget'"
