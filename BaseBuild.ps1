@@ -45,7 +45,7 @@ executeScript "SystemConfiguration.ps1";
 executeScript "RemoveDefaultApps.ps1";
 executeScript "Browsers.ps1";
 executeScript "CommonAdminTools.ps1";
-executeScript "Tools.ps1";
+#executeScript "Tools.ps1";
 executeScript "HyperV.ps1";
 RefreshEnv
 #executeScript "WSL.ps1";
