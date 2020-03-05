@@ -68,7 +68,7 @@ choco install -y terraform --params "/InstallDir:C:\bin\terraform"
 
 
 # Clean up trash.
-Remove-Item C:\Users\*\Desktop\*.ini -Force
+Remove-Item "$env:USERPROFILE\Desktop\*.ini" -Force
 
 
 Enable-UAC
