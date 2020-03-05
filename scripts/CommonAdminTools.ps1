@@ -1,3 +1,9 @@
+#--- Create a folder for bin installs ---
+Write-Host ""
+Write-Output "Creating BIN folder on C:\" -ForegroundColor "Green"
+Write-Host "------------------------------------" -ForegroundColor "Green"
+New-Item -Path C:\bin -ItemType "directory"
+
 Write-Host ""
 Write-Host "Installing Common Admin Applications..." -ForegroundColor "Green"
 Write-Host "------------------------------------" -ForegroundColor "Green"
@@ -12,6 +18,34 @@ else {
     choco install -y git.install --params "/DIR=C:\bin\git /GitAndUnixToolsOnPath /WindowsTerminal"
 }
 
+# Tools with installers placed in the BIN folder.
+Write-Host ""
+Write-Output "Installing Special Apps into C:\bin folder." -ForegroundColor "Green"
+Write-Host "------------------------------------" -ForegroundColor "Green"
+
+choco install -y curl --params "/DIR=C:\bin\curl"
+choco install -y lockhunter --params "/DIR=C:\bin\lockhunter"
+
+# node is installing to custom path correctly
+if (Check-Command -cmdname 'node') {
+    Write-Host "Node.js is already installed, checking new version..."
+    choco update nodejs -y
+}
+else {
+    Write-Host ""
+    Write-Host "Installing Node.js..." -ForegroundColor "Green"
+    #choco install nodejs -y --params "/InstallDir:C:\bin\nodejs"
+    choco install -y nodejs.install -ia "'INSTALLDIR=C:\bin\nodejs'"
+}
+# openssl is installing to custom path correctly
+choco install -y openssl.light --params "/InstallDir:C:\bin\openssl"
+#choco install -y python
+choco install -y python3 -ia "'TargetDir=C:\bin\python3'"
+choco install -y terraform -ia "'INSTALLDIR=C:\bin\terraform'"
+choco install -y wget -ia "'INSTALLDIR=C:\bin\wget'"
+
+# Unmodified choco installs
+# -------------------------
 choco install 7zip.install -y
 choco install chocolatey-core.extension -y
 #choco install dotnetcore-sdk -y
@@ -41,34 +75,3 @@ choco install vscode-yaml -y
 choco install windirstat -y
 choco install winmerge -y
 choco install winscp -y
-
-#--- Create a folder for bin installs ---
-Write-Host ""
-Write-Output "Creating BIN folder on C:\" -ForegroundColor "Green"
-Write-Host "------------------------------------" -ForegroundColor "Green"
-New-Item -Path C:\bin -ItemType "directory"
-
-# Tools with installers placed in the BIN folder.
-Write-Host ""
-Write-Output "Installing Special Apps into C:\bin folder." -ForegroundColor "Green"
-Write-Host "------------------------------------" -ForegroundColor "Green"
-
-choco install -y curl --params "/DIR=C:\bin\curl"
-choco install -y lockhunter --params "/DIR=C:\bin\lockhunter"
-
-if (Check-Command -cmdname 'node') {
-    Write-Host "Node.js is already installed, checking new version..."
-    choco update nodejs -y
-}
-else {
-    Write-Host ""
-    Write-Host "Installing Node.js..." -ForegroundColor "Green"
-    #choco install nodejs -y --params "/InstallDir:C:\bin\nodejs"
-    choco install -y nodejs.install -ia "'INSTALLDIR=C:\bin\nodejs'"
-}
-
-choco install -y openssl.light --params "/InstallDir:C:\bin\openssl"
-#choco install -y python
-choco install -y python3 -ia "'TargetDir=C:\bin\python3'"
-choco install -y terraform -ia "'INSTALLDIR=C:\bin\terraform'"
-choco install -y wget -ia "'INSTALLDIR=C:\bin\wget'"
