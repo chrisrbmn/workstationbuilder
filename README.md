@@ -13,7 +13,7 @@ Boxstarter is a wrapper for Chocolatey and includes features like managing reboo
 - A clean install of Windows 10 Pro v1903 en-us or higher
 - A stable internet connection
 
-> This script has not been tested on older version of Windows. Consider yourself warned.
+> This script has not been tested on older versions of Windows. Consider yourself warned.
 
 ## How to use
 Run the script here by clicking this [Boxstarter Web Launcher](http://boxstarter.org/package/url?https://raw.githubusercontent.com/chrisrbmn/workstationbuilder/master/BaseBuild.ps1).
