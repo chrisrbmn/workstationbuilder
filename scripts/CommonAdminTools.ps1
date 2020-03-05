@@ -46,32 +46,27 @@ choco install -y wget -ia "'INSTALLDIR=C:\bin\wget'"
 
 # Unmodified choco installs
 # -------------------------
-choco install 7zip.install -y
-choco install chocolatey-core.extension -y
-#choco install dotnetcore-sdk -y
-choco install filezilla -y
-choco install github-desktop -y
-choco install glogg -y
-#choco install lightshot.install -y
-#choco install dotpeek -y
-#choco install fiddler -y
-#choco install linqpad -y
-choco install notepadplusplus.install -y
-choco install paint.net -y
-choco install rdcman -y
-choco install softerraldapbrowser -y
-choco install sql-server-management-studio -y
+#choco install 7zip.install -y
+#choco install chocolatey-core.extension -y
+#choco install filezilla -y
+#choco install github-desktop -y
+#choco install glogg -y
+#choco install notepadplusplus.install -y
+##choco install paint.net -y
+#choco install rdcman -y
+#choco install softerraldapbrowser -y
+#choco install sql-server-management-studio -y
 #choco install teamviewer -y
-choco windowsfeatures TelnetClient
-choco install vscode -y
-choco install chocolatey-vscode -y
-choco install vscode-ansible -y
-choco install vscode-icons -y
-choco install vscode-mssql -y
-choco install vscode-powershell -y
-choco install vscode-python -y
-choco install vscode-yaml -y
+#choco windowsfeatures TelnetClient
+#choco install vscode -y
+#choco install chocolatey-vscode -y
+#choco install vscode-ansible -y
+#choco install vscode-icons -y
+#choco install vscode-mssql -y
+#choco install vscode-powershell -y
+#choco install vscode-python -y
+#choco install vscode-yaml -y
 #choco install visualstudio2019community -y
-choco install windirstat -y
-choco install winmerge -y
-choco install winscp -y
+#choco install windirstat -y
+#choco install winmerge -y
+#choco install winscp -y
