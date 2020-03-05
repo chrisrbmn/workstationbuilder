@@ -29,6 +29,11 @@ The below projects have provided examples and inspiration to this project. Pleas
 
 ## Issues
 
-- Not installing custom tools into custom path
+- Curl not installing into custom path
+- lockhunter not installing into custom path
+- nodejs not installing into custom path
+- python3 not installing into custom path
+- terraform not installing into custom path
+- wget not installing into custom path
 - Auto Reboot does work. Manually rebooting is a workaround. Script will pick up where it left off.
 - HyperV not installing
