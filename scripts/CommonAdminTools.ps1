@@ -12,6 +12,7 @@ else {
     choco install -y git.install --params "/GitAndUnixToolsOnPath /WindowsTerminal"
 }
 
+choco windowsfeatures TelnetClient
 choco install 7zip.install -y
 choco install chocolatey-core.extension -y
 choco install paint.net -y

@@ -13,11 +13,11 @@
 # https://github.com/EdiWang/EnvSetup
 #
 # The below reference detects whether it currently has administrative permissions, and if not, a UAC will pop up to request an administrator right to PowerShell and continue running the current script.
-if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
-
-function Check-Command($cmdname) {
-    return [bool](Get-Command -Name $cmdname -ErrorAction SilentlyContinue)
-}
+#if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
+#
+#function Check-Command($cmdname) {
+#    return [bool](Get-Command -Name $cmdname -ErrorAction SilentlyContinue)
+#}
 
 Disable-UAC
 $ConfirmPreference = "None" #ensure installing powershell modules don't prompt on needed dependencies
@@ -43,12 +43,9 @@ function executeScript {
 executeScript "FileExplorerSettings.ps1";
 executeScript "SystemConfiguration.ps1";
 executeScript "RemoveDefaultApps.ps1";
+executeScript "Browsers.ps1";
 executeScript "CommonAdminTools.ps1";
 executeScript "Tools.ps1";
-executeScript "Browsers.ps1";
-Write-Host ""
-Write-Host "Installing HyperV..." -ForegroundColor Green
-Write-Host "------------------------------------" -ForegroundColor "Green"
 executeScript "HyperV.ps1";
 RefreshEnv
 #executeScript "WSL.ps1";
