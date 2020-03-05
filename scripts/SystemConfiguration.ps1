@@ -20,6 +20,7 @@ w32tm /resync /rediscover
 Write-Host ""
 Write-Output "Disable XBox Gamer Bar..." -ForegroundColor "Green"
 Write-Host "------------------------------------" -ForegroundColor "Green"
+Disable-GameBarTips
 Set-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" -Name AppCaptureEnabled -Type DWord -Value 0
 Set-ItemProperty -Path "HKCU:\System\GameConfigStore" -Name GameDVR_Enabled -Type DWord -Value 0
 # -----------------------------------------------------------------------------
@@ -89,9 +90,10 @@ Write-Host "GodMode Menu already exists." -ForegroundColor "Yellow"
 Write-Host ""
 Write-Host "Enable Remote Desktop..." -ForegroundColor "Green"
 Write-Host "------------------------------------" -ForegroundColor "Green"
-Set-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\" -Name "fDenyTSConnections" -Value 0
-Set-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp\" -Name "UserAuthentication" -Value 1
-Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+#Set-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\" -Name "fDenyTSConnections" -Value 0
+#Set-ItemProperty "HKLM:\SYSTEM\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp\" -Name "UserAuthentication" -Value 1
+#Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
+Enable-RemoteDesktop
 
 if (Check-Command -cmdname 'choco') {
     Write-Host "Choco is already installed, skip installation." -ForegroundColor "Yellow"
