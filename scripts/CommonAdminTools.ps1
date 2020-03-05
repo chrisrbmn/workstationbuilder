@@ -67,6 +67,7 @@ choco install -y wget -ia "'INSTALLDIR=C:\bin\wget'"
 #choco install vscode-python -y
 #choco install vscode-yaml -y
 #choco install visualstudio2019community -y
+#choco install vlc -y
 #choco install windirstat -y
 #choco install winmerge -y
 #choco install winscp -y
