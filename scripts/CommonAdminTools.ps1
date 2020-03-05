@@ -20,10 +20,13 @@ choco install paint.net -y
 choco install winscp -y
 choco install glogg -y
 choco install vscode -y
-choco install vscode-csharp -y
+choco install chocolatey-vscode -y
+choco install vscode-ansible -y
 choco install vscode-icons -y
 choco install vscode-mssql -y
 choco install vscode-powershell -y
+choco install vscode-python -y
+choco install vscode-yaml -y
 choco install softerraldapbrowser -y
 choco install notepadplusplus.install -y
 choco install sql-server-management-studio -y
