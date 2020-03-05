@@ -22,9 +22,10 @@ else {
 Write-Host ""
 Write-Output "Installing Special Apps into C:\bin folder." -ForegroundColor "Green"
 Write-Host "------------------------------------" -ForegroundColor "Green"
-
-choco install -y curl --params "/DIR=C:\bin\curl"
-choco install -y lockhunter --params "/DIR=C:\bin\lockhunter"
+#choco install -y curl --params "/DIR=C:\bin\curl"
+choco install -y curl --params "/INSTALLDIR=C:\bin\curl"
+#choco install -y lockhunter --params "/DIR=C:\bin\lockhunter"
+choco install -y lockhunter --params "/INSTALLDIR=C:\bin\lockhunter"
 
 # node is installing to custom path correctly
 if (Check-Command -cmdname 'node') {
