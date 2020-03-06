@@ -72,4 +72,4 @@ Enable-UAC
 
 Write-Host "------------------------------------" -ForegroundColor Red
 Read-Host -Prompt "Setup is done, restart is needed, press [ENTER] to restart computer."
-Restart-Computer
+#Restart-Computer
