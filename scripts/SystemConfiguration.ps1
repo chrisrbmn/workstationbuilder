@@ -68,6 +68,7 @@ else {
 } 
 # -----------------------------------------------------------------------------
 # Enable God Mode Menu
+# https://www.onmsft.com/how-to/how-to-enter-god-mode-in-windows-10-and-what-the-heck-is-god-mode-anyway
 # Requires -RunAsAdministrator
 if (-Not (Test-Path -Path '$env:USERPROFILE\Desktop\GodMode.{ED7BA470-8E54-465E-825C-99712043E01C}' -Pathtype Container)) {
     Write-Host ""
