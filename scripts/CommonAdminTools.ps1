@@ -15,7 +15,8 @@ if (Check-Command -cmdname 'git') {
 else {
     Write-Host ""
     Write-Host "Installing Git for Windows..." -ForegroundColor Green
-    choco install -y git -ia "'TargetDir=C:\bin\git' /GitAndUnixToolsOnPath /WindowsTerminal"
+    #choco install -y git -ia "'TargetDir=C:\bin\git' /GitAndUnixToolsOnPath /WindowsTerminal"
+    choco install -y git -ia "'INSTALLDIR=C:\bin\git' /GitAndUnixToolsOnPath /WindowsTerminal"
 }
 
 # Tools with installers placed in the BIN folder.
