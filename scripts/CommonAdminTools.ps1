@@ -24,10 +24,12 @@ Write-Output "Installing Special Apps into C:\bin folder." -ForegroundColor Gree
 Write-Host "------------------------------------" -ForegroundColor Green
 #choco install -y curl --params "/DIR=C:\bin\curl"
 #choco install -y curl --params "/INSTALLDIR=C:\bin\curl"
-choco install -y curl -ia "'TargetDir=C:\bin\curl'"
+#choco install -y curl -ia "'TargetDir=C:\bin\curl'"
+choco install -y curl -ia "'INSTALLDIR=C:\bin\curl'"
 #choco install -y lockhunter --params "/DIR=C:\bin\lockhunter"
 #choco install -y lockhunter --params "/INSTALLDIR=C:\bin\lockhunter"
-choco install -y lockhunter -ia "'TargetDir=C:\bin\lockhunter'"
+#choco install -y lockhunter -ia "'TargetDir=C:\bin\lockhunter'"
+choco install -y lockhunter -ia "'INSTALLDIR=C:\bin\lockhunter'"
 
 # node is installing to custom path correctly
 if (Check-Command -cmdname 'node') {
@@ -41,11 +43,14 @@ else {
     choco install -y nodejs.install -ia "'INSTALLDIR=C:\bin\nodejs'"
 }
 # openssl is installing to custom path correctly
-choco install -y openssl.light --params "/InstallDir=C:\bin\openssl"
+#choco install -y openssl.light --params "/InstallDir=C:\bin\openssl"
+choco install -y openssl.light -ia "'INSTALLDIR=C:\bin\openssl'"
 #choco install -y python
-choco install -y python3 -ia "'TargetDir=C:\bin\python3'"
-choco install -y terraform -ia "'TargetDir=C:\bin\terraform'"
-choco install -y wget -ia "'TargetDir=C:\bin\wget'"
+choco install -y python3 -ia "'TargetDir=C:\bin\python3'" #working
+#choco install -y terraform -ia "'TargetDir=C:\bin\terraform'"
+choco install -y terraform -ia "'INSTALLDIR=C:\bin\terraform'"
+#choco install -y wget -ia "'TargetDir=C:\bin\wget'"
+choco install -y wget -ia "'INSTALLDIR=C:\bin\wget'"
 
 # Unmodified choco installs
 # -------------------------
