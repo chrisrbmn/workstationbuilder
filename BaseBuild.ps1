@@ -67,8 +67,8 @@ Remove-Item "$env:USERPROFILE\Desktop\*.ini" -Force
 
 
 Enable-UAC
-Enable-MicrosoftUpdate
-Install-WindowsUpdate -acceptEula -GetUpdatesFromMS
+#Enable-MicrosoftUpdate
+#Install-WindowsUpdate -acceptEula -GetUpdatesFromMS
 
 Write-Host "------------------------------------" -ForegroundColor Red
 Read-Host -Prompt "Setup is done, restart is needed, press [ENTER] to restart computer."
