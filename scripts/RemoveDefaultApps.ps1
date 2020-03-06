@@ -1,6 +1,6 @@
 #--- Uninstall unnecessary applications that come with Windows out of the box ---
-Write-Host "Uninstall some applications that come with Windows out of the box" -ForegroundColor "Yellow"
-Write-Host "------------------------------------" -ForegroundColor "Yellow"
+Write-Host "Uninstall some applications that come with Windows out of the box" -ForegroundColor Yellow
+Write-Host "------------------------------------" -ForegroundColor Yellow
 
 #Referenced to build script
 # https://docs.microsoft.com/en-us/windows/application-management/remove-provisioned-apps-during-update
