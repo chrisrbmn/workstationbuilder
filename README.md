@@ -24,7 +24,7 @@ Import "Add_PS1_Run_as_administrator.reg" to your registry to enable context men
 ## References
 The below projects have provided examples and inspiration to this project. Please make sure to drop by their individual projects to take a look at the cool things they have done. 
 
--  [windows-dev-box-setup-scripts](https://github.com/microsoft/windows-dev-box-setup-scripts)
+-  [Microsoft - windows-dev-box-setup-scripts](https://github.com/microsoft/windows-dev-box-setup-scripts)
 -  [Edi Wang - EnvSetup](https://github.com/EdiWang/EnvSetup)
 -  [Joshua Chini](https://joshuachini.com/2017/10/27/automated-setup-of-a-windows-environment-using-boxstarter-and-powershell/)
 
