@@ -16,7 +16,8 @@ else {
     Write-Host ""
     Write-Host "Installing Git for Windows..." -ForegroundColor Green
     #choco install -y git -ia "'TargetDir=C:\bin\git' /GitAndUnixToolsOnPath /WindowsTerminal"
-    choco install -y git -ia "'INSTALLDIR=C:\bin\git' /GitAndUnixToolsOnPath /WindowsTerminal"
+    #choco install -y git -ia "'INSTALLDIR=C:\bin\git' /GitAndUnixToolsOnPath /WindowsTerminal"
+    choco install git.install --params "/InstallDir:C:\bin\git /GitAndUnixToolsOnPath /NoGitLfs /SChannel /NoAutoCrlf"
 }
 
 # Tools with installers placed in the BIN folder.
@@ -26,11 +27,13 @@ Write-Host "------------------------------------" -ForegroundColor Green
 #choco install -y curl --params "/DIR=C:\bin\curl"
 #choco install -y curl --params "/INSTALLDIR=C:\bin\curl"
 #choco install -y curl -ia "'TargetDir=C:\bin\curl'"
-choco install -y curl -ia "'INSTALLDIR=C:\bin\curl'"
+#choco install -y curl -ia "'INSTALLDIR=C:\bin\curl'"
+choco install -y curl --params "/InstallDir:C:\bin\curl"
 #choco install -y lockhunter --params "/DIR=C:\bin\lockhunter"
 #choco install -y lockhunter --params "/INSTALLDIR=C:\bin\lockhunter"
 #choco install -y lockhunter -ia "'TargetDir=C:\bin\lockhunter'"
-choco install -y lockhunter -ia "'INSTALLDIR=C:\bin\lockhunter'"
+#choco install -y lockhunter -ia "'INSTALLDIR=C:\bin\lockhunter'"
+choco install -y lockhunter --params "/InstallDir:C:\bin\lockhunter"
 
 # node is installing to custom path correctly
 if (Check-Command -cmdname 'node') {
@@ -46,7 +49,7 @@ else {
 # openssl is installing to custom path correctly
 #choco install -y openssl.light --params "/InstallDir=C:\bin\openssl"
 #choco install -y openssl.light -ia "'INSTALLDIR=C:\bin\openssl'"
-choco install openssl.light --params "/InstallDir:C:\bin\openssl"
+choco install openssl.light --params "/InstallDir:C:\bin\openssl" #working
 #choco install -y python
 choco install -y python3 -ia "'TargetDir=C:\bin\python3'" #working
 #choco install -y terraform -ia "'TargetDir=C:\bin\terraform'"
