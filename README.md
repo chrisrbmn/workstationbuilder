@@ -35,8 +35,9 @@ This script should provide most of what the infrastructure/application admin/eng
 
 - Curl not installing into custom path
 - lockhunter not installing into custom path
+- openssl not installing into custom path
 - ~~nodejs not installing into custom path~~
-- python3 not installing into custom path
+- ~~python3 not installing into custom path~~
 - terraform not installing into custom path
 - wget not installing into custom path
 - Auto Reboot does work. Manually rebooting is a workaround. Script will pick up where it left off.
