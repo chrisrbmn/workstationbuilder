@@ -27,14 +27,6 @@ Write-Host "------------------------------------" -ForegroundColor Green
 # We don't need to install curl on windows 10 1803 or higher.
 #
 #choco install -y curl --params "/DIR=C:\bin\curl"
-#choco install -y curl --params "/INSTALLDIR=C:\bin\curl"
-#choco install -y curl -ia "'TargetDir=C:\bin\curl'"
-#choco install -y curl -ia "'INSTALLDIR=C:\bin\curl'"
-#choco install -y curl --params "/InstallDir:C:\bin\curl"
-#choco install -y lockhunter --params "/DIR=C:\bin\lockhunter"
-#choco install -y lockhunter --params "/INSTALLDIR=C:\bin\lockhunter"
-#choco install -y lockhunter -ia "'TargetDir=C:\bin\lockhunter'"
-#choco install -y lockhunter -ia "'INSTALLDIR=C:\bin\lockhunter'"
 choco install -y lockhunter -ia "/DIR=C:\bin\lockhunter"
 
 # node is installing to custom path correctly
@@ -61,8 +53,8 @@ choco install -y python3 -ia "'TargetDir=C:\bin\python3'" #working
 
 # Unmodified choco installs
 # -------------------------
-#choco install 7zip.install -y
-#choco install chocolatey-core.extension -y
+choco install 7zip.install -y
+choco install chocolatey-core.extension -y
 #choco install filezilla -y
 #choco install github-desktop -y
 #choco install glogg -y
@@ -72,7 +64,7 @@ choco install -y python3 -ia "'TargetDir=C:\bin\python3'" #working
 #choco install softerraldapbrowser -y
 #choco install sql-server-management-studio -y
 #choco install teamviewer -y
-#choco windowsfeatures TelnetClient
+choco windowsfeatures TelnetClient
 #choco install vscode -y
 #choco install chocolatey-vscode -y
 #choco install vscode-ansible -y
