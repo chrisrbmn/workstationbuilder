@@ -40,16 +40,11 @@ else {
     #choco install nodejs -y --params "/InstallDir:C:\bin\nodejs"
     choco install -y nodejs.install -ia "'INSTALLDIR=C:\bin\nodejs'" #working
 }
-# openssl is installing to custom path correctly
-#choco install -y openssl.light --params "/InstallDir=C:\bin\openssl"
-#choco install -y openssl.light -ia "'INSTALLDIR=C:\bin\openssl'"
+
 choco install openssl.light --params "/InstallDir:C:\bin\openssl" #working
 #choco install -y python
 choco install -y python3 -ia "'TargetDir=C:\bin\python3'" #working
-#choco install -y terraform -ia "'TargetDir=C:\bin\terraform'"
-#choco install -y terraform -ia "'INSTALLDIR=C:\bin\terraform'"
-#choco install -y wget -ia "'TargetDir=C:\bin\wget'"
-#choco install -y wget -ia "'INSTALLDIR=C:\bin\wget'"
+
 
 # Unmodified choco installs
 # -------------------------
