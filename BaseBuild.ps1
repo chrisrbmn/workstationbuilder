@@ -22,6 +22,9 @@ function Check-Command($cmdname) {
 Disable-UAC
 $ConfirmPreference = "None" #ensure installing powershell modules don't prompt on needed dependencies
 
+Enable-MicrosoftUpdate
+Install-WindowsUpdate -acceptEula -GetUpdatesFromMS
+
 # Get the base URI path from the ScriptToCall value
 $bstrappackage = "-bootstrapPackage"
 $helperUri = $Boxstarter['ScriptToCall']
@@ -40,10 +43,10 @@ function executeScript {
 }
 
 #--- Setting up Windows ---
-#executeScript "FileExplorerSettings.ps1";
-#executeScript "SystemConfiguration.ps1";
-#executeScript "RemoveDefaultApps.ps1";
-#executeScript "Browsers.ps1";
+executeScript "FileExplorerSettings.ps1";
+executeScript "SystemConfiguration.ps1";
+executeScript "RemoveDefaultApps.ps1";
+executeScript "Browsers.ps1";
 executeScript "CommonAdminTools.ps1";
 executeScript "Tools.ps1";
 executeScript "HyperV.ps1";
@@ -65,10 +68,7 @@ RefreshEnv
 # Clean up trash.
 Remove-Item "$env:USERPROFILE\Desktop\*.ini" -Force
 
-
 Enable-UAC
-#Enable-MicrosoftUpdate
-#Install-WindowsUpdate -acceptEula -GetUpdatesFromMS
 
 Write-Host "------------------------------------" -ForegroundColor Red
 Read-Host -Prompt "Setup is done, restart is needed, press [ENTER] to restart computer."

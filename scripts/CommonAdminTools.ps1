@@ -10,7 +10,7 @@ Write-Host "------------------------------------" -ForegroundColor Green
 
 if (Check-Command -cmdname 'git') {
     Write-Host "Git is already installed, checking new version..."
-    choco update git -y
+    choco upgrade git -y
 }
 else {
     Write-Host ""
@@ -40,7 +40,7 @@ choco install -y lockhunter -ia "/DIR=C:\bin\lockhunter"
 # node is installing to custom path correctly
 if (Check-Command -cmdname 'node') {
     Write-Host "Node.js is already installed, checking new version..."
-    choco update nodejs -y
+    choco upgrade nodejs -y
 }
 else {
     Write-Host ""
