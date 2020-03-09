@@ -33,12 +33,12 @@ This script should provide most of what the infrastructure/application admin/eng
 
 ## Issues
 
-- Curl not installing into custom path
-- lockhunter not installing into custom path
-- openssl not installing into custom path
+- ~~Curl not installing into custom path - no longer needed, as comes from w10 1803 and newer by default.~~
+- ~~lockhunter not installing into custom path~~
+- ~~openssl not installing into custom path~~
 - ~~nodejs not installing into custom path~~
 - ~~python3 not installing into custom path~~
-- terraform not installing into custom path
-- wget not installing into custom path
-- Auto Reboot does work. Manually rebooting is a workaround. Script will pick up where it left off.
-- HyperV not installing
+- ~~terraform not installing into custom path~~
+- ~~wget not installing into custom path~~
+- ~~Auto Reboot does work. Manually rebooting is a workaround. Script will pick up where it left off. - may be fixed by ordering windows updates first~~
+- ~~HyperV not installing~~
