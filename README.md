@@ -29,7 +29,7 @@ The below projects have provided examples and inspiration to this project. Pleas
 -  [Joshua Chini](https://joshuachini.com/2017/10/27/automated-setup-of-a-windows-environment-using-boxstarter-and-powershell/)
 
 ## Customizing or Contributing
-This script should provide most of what the infrastructure/application admin/engineer needs in his/her toolset. With that said, it is certainly possible that this script may not match your personal preferences exactly. If this is the case, please feel free to fork this project and make whatever changes you desire. I only ask that you please give a little credit where due by providing a reference link back to this project and/or the other projects referenced in the [References](require "references") section above.
+This script should provide most of what the infrastructure/application admin/engineer needs in his/her toolset. With that said, it is certainly possible that this script may not match your personal preferences exactly. If this is the case, please feel free to fork this project and make whatever changes you desire. I only ask that you please give a little credit where due by providing a reference link back to this project and/or the other projects referenced in the [References](#references) section above.
 
 ## Issues
 
