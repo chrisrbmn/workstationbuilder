@@ -1,5 +1,5 @@
 # Windows 10 SysAdmin/Engineer Machine Setup
-This is the script to setup a new sysadmin workstation. You can modify the scripts to fit your own requirements.
+This is a script to setup a new sysadmin/sysengineer workstation. Feel free to modify the scripts to fit your own requirements.
 
 These scripts leverage two popular open source projects.
 
