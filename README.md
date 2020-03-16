@@ -34,13 +34,7 @@ The below projects have provided examples and inspiration to this project. Pleas
 This script should provide most of what the infrastructure/application admin/engineer needs in his/her toolset. With that said, it is certainly possible that this script may not match your personal preferences exactly. If this is the case, please feel free to fork this project and make whatever changes you desire. I only ask that you please give a little credit where due by providing a reference link back to this project and/or the other projects referenced in the [References](#references) section above.
 
 ## Issues
-
+- The Boxstarter ClickOnce installer does not work when using Chrome. Please use Edge.
+- Reboot is not always logging you back in to resume the script. Login manually and the script will continue on its own.
 - ~~Curl not installing into custom path - no longer needed, as comes from w10 1803 and newer by default.~~
-- ~~lockhunter not installing into custom path~~
-- ~~openssl not installing into custom path~~
-- ~~nodejs not installing into custom path~~
-- ~~python3 not installing into custom path~~
-- ~~terraform not installing into custom path~~
-- ~~wget not installing into custom path~~
-- ~~Auto Reboot does work. Manually rebooting is a workaround. Script will pick up where it left off. - may be fixed by ordering windows updates first~~
-- ~~HyperV not installing~~
+
