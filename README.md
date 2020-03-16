@@ -14,7 +14,9 @@ Boxstarter is a wrapper for Chocolatey and includes features like managing reboo
 - A stable internet connection
 
 > This script has not been tested on older versions of Windows. Consider yourself warned.
-
+``` 
+Credit for this goes to  [Edi Wang](https://github.com/EdiWang/EnvSetup)
+```
 ## How to use
 Run the script here by clicking this [Boxstarter Web Launcher](http://boxstarter.org/package/url?https://raw.githubusercontent.com/chrisrbmn/workstationbuilder/master/BaseBuild.ps1).
 
