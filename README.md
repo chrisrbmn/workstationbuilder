@@ -14,14 +14,13 @@ Boxstarter is a wrapper for Chocolatey and includes features like managing reboo
 - A stable internet connection
 
 > This script has not been tested on older versions of Windows. Consider yourself warned.
-``` 
-Credit for this goes to  [Edi Wang](https://github.com/EdiWang/EnvSetup)
-```
+
 ## How to use
 Run the script here by clicking this [Boxstarter Web Launcher](http://boxstarter.org/package/url?https://raw.githubusercontent.com/chrisrbmn/workstationbuilder/master/BaseBuild.ps1).
 
 ## Optional
 Import "Add_PS1_Run_as_administrator.reg" to your registry to enable context menu on the powershell files to run as Administrator. The Reg file is located in the _optional_ folder.
+> Credit for this goes to  [Edi Wang](https://github.com/EdiWang/EnvSetup)
 
 ## References
 The below projects have provided examples and inspiration to this project. Please make sure to drop by their individual projects to take a look at the cool things they have done. 
