@@ -47,8 +47,7 @@ executeScript "FileExplorerSettings.ps1";
 executeScript "SystemConfigurationLite.ps1";
 executeScript "RemoveDefaultApps.ps1";
 executeScript "Browsers.ps1";
-#executeScript "CommonAdminTools.ps1";
-#executeScript "Tools.ps1";
+executeScript "ToolsLite.ps1";
 RefreshEnv
 
 # Clean up trash.
